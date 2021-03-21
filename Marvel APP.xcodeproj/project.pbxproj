@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F43C1E392607D7DD00A0BA8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43C1E382607D7DD00A0BA8D /* LoginViewController.swift */; };
 		F4A615082607C745006C4090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A615072607C745006C4090 /* AppDelegate.swift */; };
 		F4A6150A2607C745006C4090 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A615092607C745006C4090 /* SceneDelegate.swift */; };
 		F4A6150C2607C745006C4090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A6150B2607C745006C4090 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 		F4A6151F2607C746006C4090 /* Marvel_APPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A6151E2607C746006C4090 /* Marvel_APPTests.swift */; };
 		F4A6152A2607C747006C4090 /* Marvel_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A615292607C747006C4090 /* Marvel_APPUITests.swift */; };
 		F4A6154C2607C816006C4090 /* Gotham-Font in Resources */ = {isa = PBXBuildFile; fileRef = F4A6154B2607C816006C4090 /* Gotham-Font */; };
+		F4A615512607D1E9006C4090 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A615502607D1E9006C4090 /* DesignableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F43C1E382607D7DD00A0BA8D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F4A615042607C745006C4090 /* Marvel APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel APP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A615072607C745006C4090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4A615092607C745006C4090 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		F4A615292607C747006C4090 /* Marvel_APPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marvel_APPUITests.swift; sourceTree = "<group>"; };
 		F4A6152B2607C747006C4090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4A6154B2607C816006C4090 /* Gotham-Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Gotham-Font"; path = "../../../../Desktop/Gotham-Font"; sourceTree = "<group>"; };
+		F4A615502607D1E9006C4090 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +109,10 @@
 				F4A615092607C745006C4090 /* SceneDelegate.swift */,
 				F4A615422607C7FE006C4090 /* Extensions */,
 				F4A6150B2607C745006C4090 /* ViewController.swift */,
+				F43C1E382607D7DD00A0BA8D /* LoginViewController.swift */,
 				F4A6150D2607C745006C4090 /* Main.storyboard */,
 				F4A615102607C746006C4090 /* Assets.xcassets */,
+				F4A615502607D1E9006C4090 /* DesignableView.swift */,
 				F4A615122607C746006C4090 /* LaunchScreen.storyboard */,
 				F4A615152607C746006C4090 /* Info.plist */,
 			);
@@ -270,8 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A615512607D1E9006C4090 /* DesignableView.swift in Sources */,
 				F4A6150C2607C745006C4090 /* ViewController.swift in Sources */,
 				F4A615082607C745006C4090 /* AppDelegate.swift in Sources */,
+				F43C1E392607D7DD00A0BA8D /* LoginViewController.swift in Sources */,
 				F4A6150A2607C745006C4090 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
