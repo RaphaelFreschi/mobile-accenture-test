@@ -52,6 +52,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="478" id="1C4-Cz-zCc"/>
+                                    <constraint firstAttribute="width" constant="278" id="Z3b-ar-sej"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
