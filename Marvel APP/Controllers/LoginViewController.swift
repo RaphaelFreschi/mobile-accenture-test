@@ -21,9 +21,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(_ sender: Any) {
         
-        if !isValidEmail(self.email.text!) {
+        if !isValidEmail(self.email.text!) || email.text == "" {
             createAlert(title: "Atenção", msg: "Email inválido")
-        } else if !isValidPassword(self.password.text!){
+        } else if !isValidPassword(self.password.text!) || password.text = "" {
             createAlert(title: "Atenção", msg: "A senha deverá conter no mínimo 6 caracteres, um numúero e uma letra maiúscula")
         }
     
