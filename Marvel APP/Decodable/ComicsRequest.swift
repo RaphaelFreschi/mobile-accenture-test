@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 enum comicsError:Error {
     case noDataAvaible
@@ -23,7 +24,7 @@ struct ComicsRequest {
         ] as [String : String]
     
     init(comicID: Int, offset: Int){
-        let resourceString = "https://gateway.marvel.com:443/v1/public/comics?ts=1&limit=10&offset=0&apikey=45cdc4bcc1e5b6b61c0afcf2925b2f36&hash=5a32b4349da044fd41c730d60a8ddd2c"
+        let resourceString = "https://gateway.marvel.com:443/v1/public/comics?ts=1&limit=10&offset=\(offset)&apikey=45cdc4bcc1e5b6b61c0afcf2925b2f36&hash=5a32b4349da044fd41c730d60a8ddd2c"
         
         
         guard let resourceURL = URL(string: resourceString) else {fatalError()}
@@ -42,8 +43,9 @@ struct ComicsRequest {
             
             do {
                 let decoder = JSONDecoder()
-                let comicsResponse = try decoder.decode(comicsData.self, from: jsonData)
-                let comicsDetail = comicsResponse.data.res
+                print("JSON: \(JSON(jsonData))")
+                let comicsResponse = try decoder.decode(comicsData.self, from: jsonData.self)
+                let comicsDetail = comicsResponse.data.results
                 completion(.success(comicsDetail))
             } catch {
                 completion(.failure(.canNotProcessData))

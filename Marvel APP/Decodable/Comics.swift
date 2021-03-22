@@ -12,7 +12,7 @@ struct comicsData: Decodable {
 }
 
 struct comicsResults: Decodable {
-    var res: [comicsInfos]
+    var results: [comicsInfos]
     
 }
 
