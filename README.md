@@ -4,18 +4,12 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project">Sobre o projeto</a>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Pré-requisitos</a></li>
-        <li><a href="#installation">Instalação</a></li>
-      </ul>
-    </li>
+      <li><a href="#prerequisites">Pré-requisitos</a></li>
+      <li><a href="#installation">Instalação</a></li>
   </ol>
 </details>
 
