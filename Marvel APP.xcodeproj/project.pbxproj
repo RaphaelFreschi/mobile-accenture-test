@@ -160,19 +160,11 @@
 				F4A615072607C745006C4090 /* AppDelegate.swift */,
 				F4A615092607C745006C4090 /* SceneDelegate.swift */,
 				F4A615422607C7FE006C4090 /* Extensions */,
-				F43C1E382607D7DD00A0BA8D /* LoginViewController.swift */,
-				F4A6150D2607C745006C4090 /* Main.storyboard */,
+				F4B519F126089DCB003864E2 /* Storyboards */,
 				F4A615102607C746006C4090 /* Assets.xcassets */,
-				F4D5F3CC2608379800B2E293 /* Extensions.swift */,
-				F4A615502607D1E9006C4090 /* DesignableView.swift */,
-				F4B519EA26089C6A003864E2 /* ComicsDetailViewController.swift */,
-				F4D5F3BB26082A3600B2E293 /* ComicsRequest.swift */,
-				F43C1E4E2607DD5E00A0BA8D /* ComicsCell.xib */,
-				F4D5F3D426084F4200B2E293 /* Comics.swift */,
-				F4D5F3C026082EFD00B2E293 /* New Group */,
-				F43C1E532607E0B300A0BA8D /* ComicsTableViewCell.swift */,
-				F4A615122607C746006C4090 /* LaunchScreen.storyboard */,
-				F43C1E632607E80700A0BA8D /* ComicsViewController.swift */,
+				F4B519F226089DE2003864E2 /* Decodable */,
+				F4D5F3C026082EFD00B2E293 /* View */,
+				F4B519EF26089D87003864E2 /* Controllers */,
 				F4A615152607C746006C4090 /* Info.plist */,
 			);
 			path = "Marvel APP";
@@ -199,16 +191,48 @@
 		F4A615422607C7FE006C4090 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F4D5F3CC2608379800B2E293 /* Extensions.swift */,
 				F4A6154B2607C816006C4090 /* Gotham-Font */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		F4D5F3C026082EFD00B2E293 /* New Group */ = {
+		F4B519EF26089D87003864E2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F43C1E382607D7DD00A0BA8D /* LoginViewController.swift */,
+				F4B519EA26089C6A003864E2 /* ComicsDetailViewController.swift */,
+				F43C1E632607E80700A0BA8D /* ComicsViewController.swift */,
 			);
-			path = "New Group";
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F4B519F126089DCB003864E2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F4A615122607C746006C4090 /* LaunchScreen.storyboard */,
+				F4A6150D2607C745006C4090 /* Main.storyboard */,
+				F43C1E4E2607DD5E00A0BA8D /* ComicsCell.xib */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F4B519F226089DE2003864E2 /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				F4D5F3BB26082A3600B2E293 /* ComicsRequest.swift */,
+				F4D5F3D426084F4200B2E293 /* Comics.swift */,
+			);
+			path = Decodable;
+			sourceTree = "<group>";
+		};
+		F4D5F3C026082EFD00B2E293 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F43C1E532607E0B300A0BA8D /* ComicsTableViewCell.swift */,
+				F4A615502607D1E9006C4090 /* DesignableView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

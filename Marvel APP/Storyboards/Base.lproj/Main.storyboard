@@ -218,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="1936.2318840579712" y="90.401785714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Comics Detail View Controller-->
         <scene sceneID="AC9-ws-eEe">
             <objects>
-                <viewController id="5Ds-fE-hmh" sceneMemberID="viewController">
+                <viewController id="5Ds-fE-hmh" customClass="ComicsDetailViewController" customModule="Marvel_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y29-2n-y5Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,6 +285,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qsm-x1-Yeg"/>
+                    <connections>
+                        <outlet property="creators" destination="slT-l2-LMU" id="3MV-Ys-DrO"/>
+                        <outlet property="description" destination="QDK-na-CzY" id="pJI-Ob-4Bk"/>
+                        <outlet property="image" destination="I5l-iK-zoO" id="5XJ-Kf-kAI"/>
+                        <outlet property="price" destination="d3r-yb-QTN" id="ytQ-Gh-sPw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ke8-92-BDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

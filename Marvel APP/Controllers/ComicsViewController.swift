@@ -45,8 +45,21 @@ class ComicsViewController: UIViewController {
      
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        let detail = segue.destination as! ComicsDetailViewController?
+        detail.imageUrl = sender.thumbnail.path
+        detail.title = sender.title
+        detail.price = sender.prices[0].price
+        detail.desc = sender.desc
+        
+            
+    }
+        
 }
+    
+
+    
 
 extension ComicsViewController: UITableViewDelegate {
     
@@ -95,7 +108,9 @@ extension ComicsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "listToDetail", sender: nil)
+        let item = self.comics[indexPath.row]
+        
+        performSegue(withIdentifier: "listToDetail", sender: item)
     }
     
     
