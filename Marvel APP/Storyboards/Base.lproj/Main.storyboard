@@ -246,48 +246,54 @@
                                 <color key="textColor" red="0.77471858260000004" green="0.073359914119999994" blue="0.09708832949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDK-na-CzY">
-                                <rect key="frame" x="15" y="418" width="384" height="212"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKw-Vv-XVn">
+                                <rect key="frame" x="15" y="660" width="384" height="109"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="212" id="srg-bs-ARq"/>
-                                </constraints>
-                                <string key="text">For Doctor Bruce Banner life is anything but normal. But what happens when two women get between him and his alter ego, the Incorrigible Hulk? Hulk confused! \r\nIndy superstar Peter Bagge (THE MEGALOMANIACAL SPIDER-MAN) takes a satirical jab at the Hulk mythos with a tale of dames, debauchery and destruction.\r\n32 PGS./MARVEL PSR...$2.99</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Gotham-Black" family="Gotham" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slT-l2-LMU">
-                                <rect key="frame" x="15" y="638" width="384" height="109"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="109" id="oZ3-PI-mKc"/>
+                                    <constraint firstAttribute="height" constant="109" id="GbW-zz-f9l"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slT-l2-LMU">
+                                <rect key="frame" x="15" y="418" width="384" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="232" id="Qaw-Qv-NsT"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE </string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZmK-rz-2ad"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="I5l-iK-zoO" firstAttribute="top" secondItem="ZmK-rz-2ad" secondAttribute="top" constant="10" id="0Ng-o9-ExM"/>
-                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="slT-l2-LMU" secondAttribute="trailing" constant="15" id="8M4-Mc-EzX"/>
-                            <constraint firstItem="d3r-yb-QTN" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="AMe-vV-Ccu"/>
-                            <constraint firstItem="slT-l2-LMU" firstAttribute="top" secondItem="QDK-na-CzY" secondAttribute="bottom" constant="8" id="NVg-Cc-JFd"/>
-                            <constraint firstItem="d3r-yb-QTN" firstAttribute="top" secondItem="I5l-iK-zoO" secondAttribute="bottom" constant="30" id="Zay-QC-oNr"/>
-                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="I5l-iK-zoO" secondAttribute="trailing" constant="102" id="cLt-Uu-QLD"/>
-                            <constraint firstItem="slT-l2-LMU" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="gPy-20-Unf"/>
-                            <constraint firstItem="I5l-iK-zoO" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="103" id="gTg-U9-4Ic"/>
-                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="QDK-na-CzY" secondAttribute="trailing" constant="15" id="iIN-dL-fV3"/>
-                            <constraint firstItem="QDK-na-CzY" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="k7J-1d-4XQ"/>
-                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="d3r-yb-QTN" secondAttribute="trailing" constant="15" id="nsd-ZB-ZAq"/>
-                            <constraint firstItem="QDK-na-CzY" firstAttribute="top" secondItem="d3r-yb-QTN" secondAttribute="bottom" constant="10" id="wzV-3G-Au1"/>
+                            <constraint firstItem="I5l-iK-zoO" firstAttribute="top" secondItem="ZmK-rz-2ad" secondAttribute="top" constant="10" id="3KX-oK-OEr"/>
+                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="slT-l2-LMU" secondAttribute="trailing" constant="15" id="4i3-fU-k0M"/>
+                            <constraint firstItem="d3r-yb-QTN" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="FQ8-dV-wqF"/>
+                            <constraint firstItem="slT-l2-LMU" firstAttribute="top" secondItem="d3r-yb-QTN" secondAttribute="bottom" constant="10" id="NeQ-QN-32h"/>
+                            <constraint firstItem="I5l-iK-zoO" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="103" id="Sgh-bz-QHj"/>
+                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="I5l-iK-zoO" secondAttribute="trailing" constant="102" id="Zs4-ic-S1f"/>
+                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="sKw-Vv-XVn" secondAttribute="trailing" constant="15" id="bWS-ga-GqE"/>
+                            <constraint firstItem="slT-l2-LMU" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="cLm-LY-8RA"/>
+                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="d3r-yb-QTN" secondAttribute="trailing" constant="15" id="dMQ-gb-SKO"/>
+                            <constraint firstItem="sKw-Vv-XVn" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="hcs-QW-tgD"/>
+                            <constraint firstItem="d3r-yb-QTN" firstAttribute="top" secondItem="I5l-iK-zoO" secondAttribute="bottom" constant="30" id="nE2-Lx-oMQ"/>
+                            <constraint firstItem="sKw-Vv-XVn" firstAttribute="top" secondItem="slT-l2-LMU" secondAttribute="bottom" constant="10" id="qDj-Ol-bcr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qsm-x1-Yeg"/>
                     <connections>
                         <outlet property="creators" destination="slT-l2-LMU" id="xyW-an-1Cx"/>
-                        <outlet property="description" destination="QDK-na-CzY" id="fPO-xb-hqL"/>
+                        <outlet property="descComic" destination="slT-l2-LMU" id="s7r-9v-6JP"/>
                         <outlet property="imageComic" destination="I5l-iK-zoO" id="JhP-2c-RSF"/>
                         <outlet property="price" destination="d3r-yb-QTN" id="cN0-XS-5Wm"/>
                     </connections>

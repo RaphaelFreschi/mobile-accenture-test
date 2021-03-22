@@ -12,7 +12,8 @@ class ComicsDetailViewController: UIViewController {
     @IBOutlet weak var imageComic: UIImageView!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var creators: UILabel!
-    @IBOutlet var description: UITextView!
+    @IBOutlet var descComic: UILabel!
+    
     
     var imageUrl:String?
     var priceComics: String?
@@ -25,7 +26,7 @@ class ComicsDetailViewController: UIViewController {
         
         self.imageComic.downloadedFrom(url: URL(string: self.imageUrl!)!)
         self.price.text = priceComics
-        self.description.text = desc
+        self.descComic.text = desc
         self.creators.text = creator
         self.navigationItem.title = titleNav
 
