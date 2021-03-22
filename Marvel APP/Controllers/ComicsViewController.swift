@@ -47,11 +47,11 @@ class ComicsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-        let detail = segue.destination as! ComicsDetailViewController?
-        detail.imageUrl = sender.thumbnail.path
-        detail.title = sender.title
-        detail.price = sender.prices[0].price
-        detail.desc = sender.desc
+//        let detail = segue.destination as! ComicsDetailViewController?
+//        detail.imageUrl = sender.thumbnail.path
+//        detail.title = sender.title
+//        detail.price = sender.prices[0].price
+//        detail.desc = sender.desc
         
             
     }

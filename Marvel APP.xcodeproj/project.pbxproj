@@ -23,7 +23,7 @@
 		F4A6152A2607C747006C4090 /* Marvel_APPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A615292607C747006C4090 /* Marvel_APPUITests.swift */; };
 		F4A6154C2607C816006C4090 /* Gotham-Font in Resources */ = {isa = PBXBuildFile; fileRef = F4A6154B2607C816006C4090 /* Gotham-Font */; };
 		F4A615512607D1E9006C4090 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A615502607D1E9006C4090 /* DesignableView.swift */; };
-		F4B519EB26089C6A003864E2 /* ComicsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B519EA26089C6A003864E2 /* ComicsDetailViewController.swift */; };
+		F4B51A102608A73F003864E2 /* ComicsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B51A0F2608A73F003864E2 /* ComicsDetailViewController.swift */; };
 		F4D5F3BC26082A3600B2E293 /* ComicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5F3BB26082A3600B2E293 /* ComicsRequest.swift */; };
 		F4D5F3CD2608379800B2E293 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5F3CC2608379800B2E293 /* Extensions.swift */; };
 		F4D5F3D526084F4200B2E293 /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5F3D426084F4200B2E293 /* Comics.swift */; };
@@ -73,7 +73,7 @@
 		F4A6152B2607C747006C4090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4A6154B2607C816006C4090 /* Gotham-Font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Gotham-Font"; path = "../../../../Desktop/Gotham-Font"; sourceTree = "<group>"; };
 		F4A615502607D1E9006C4090 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
-		F4B519EA26089C6A003864E2 /* ComicsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailViewController.swift; sourceTree = "<group>"; };
+		F4B51A0F2608A73F003864E2 /* ComicsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDetailViewController.swift; sourceTree = "<group>"; };
 		F4D5F3BB26082A3600B2E293 /* ComicsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsRequest.swift; sourceTree = "<group>"; };
 		F4D5F3CC2608379800B2E293 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F4D5F3D426084F4200B2E293 /* Comics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
@@ -201,8 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				F43C1E382607D7DD00A0BA8D /* LoginViewController.swift */,
-				F4B519EA26089C6A003864E2 /* ComicsDetailViewController.swift */,
 				F43C1E632607E80700A0BA8D /* ComicsViewController.swift */,
+				F4B51A0F2608A73F003864E2 /* ComicsDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -477,7 +477,7 @@
 			files = (
 				F4A615512607D1E9006C4090 /* DesignableView.swift in Sources */,
 				F4A615082607C745006C4090 /* AppDelegate.swift in Sources */,
-				F4B519EB26089C6A003864E2 /* ComicsDetailViewController.swift in Sources */,
+				F4B51A102608A73F003864E2 /* ComicsDetailViewController.swift in Sources */,
 				F43C1E642607E80700A0BA8D /* ComicsViewController.swift in Sources */,
 				F4D5F3D526084F4200B2E293 /* Comics.swift in Sources */,
 				F43C1E542607E0B300A0BA8D /* ComicsTableViewCell.swift in Sources */,

@@ -23,7 +23,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if !isValidEmail(self.email.text!) {
             createAlert(title: "Atenção", msg: "Email inválido")
-        } else !isValidPassword(self.password.text!){
+        } else if !isValidPassword(self.password.text!){
             createAlert(title: "Atenção", msg: "A senha deverá conter no mínimo 6 caracteres, um numúero e uma letra maiúscula")
         }
     
@@ -68,7 +68,7 @@ extension UIViewController{
     
     func createAlert(title:String, msg:String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
     }

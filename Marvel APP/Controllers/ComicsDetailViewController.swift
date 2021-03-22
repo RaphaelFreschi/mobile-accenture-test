@@ -8,40 +8,36 @@
 import UIKit
 
 class ComicsDetailViewController: UIViewController {
-    
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var price: Label!
-    @IBOutlet weak var description: UITextView!
-    @IBOutlet weak var creators: Label!
+
+    @IBOutlet weak var imageComic: UIImageView!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var creators: UILabel!
+    @IBOutlet var description: UITextView!
     
     var imageUrl:String?
-    var price: String?
+    var priceComics: String?
     var desc:String?
     var creator:String?
-    var title: String?
+    var titleNav: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.image = downloadedFrom(url: URL(string: imageUrl))
-        self.price = price
-        self.description = desc
-        self.creators = creator
-        
-        self.navigationItem.title = self.title
-        
-        // Do any additional setup after loading the view.
-    }
-    
+        self.imageComic.downloadedFrom(url: URL(string: self.imageUrl!)!)
+        self.price.text = priceComics
+        self.description.text = desc
+        self.creators.text = creator
+        self.navigationItem.title = titleNav
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
+
+extension ComicsDetailViewController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        print(textView.text!)
+    }
+    
+}
+

@@ -286,10 +286,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="qsm-x1-Yeg"/>
                     <connections>
-                        <outlet property="creators" destination="slT-l2-LMU" id="3MV-Ys-DrO"/>
-                        <outlet property="description" destination="QDK-na-CzY" id="pJI-Ob-4Bk"/>
-                        <outlet property="image" destination="I5l-iK-zoO" id="5XJ-Kf-kAI"/>
-                        <outlet property="price" destination="d3r-yb-QTN" id="ytQ-Gh-sPw"/>
+                        <outlet property="creators" destination="slT-l2-LMU" id="xyW-an-1Cx"/>
+                        <outlet property="description" destination="QDK-na-CzY" id="fPO-xb-hqL"/>
+                        <outlet property="imageComic" destination="I5l-iK-zoO" id="JhP-2c-RSF"/>
+                        <outlet property="price" destination="d3r-yb-QTN" id="cN0-XS-5Wm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ke8-92-BDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
