@@ -16,11 +16,11 @@
 
 ## Sobre o Projeto
 
-Projeto baseado nas <a href="https://developer.marvel.com"> API's Marvel Comics </a> com o objetivo de listar e detalhe todos os seus HQ's lançados.
+Projeto baseado nas <a href="https://developer.marvel.com"> API's Marvel Comics </a> com o objetivo de listar e detalhar todos os seus HQ's lançados.
 
 ### Pré-requisitos
 
-Instale o gerenciador de pacotes CocoaPods antes de clonar o rodar o projeto
+Instale o gerenciador de pacotes CocoaPods antes de clonar e rodar o projeto
 * npm
   ```sh
   sudo gem install cocoapods
@@ -32,7 +32,7 @@ Instale o gerenciador de pacotes CocoaPods antes de clonar o rodar o projeto
    ```sh
    git clone https://github.com/RaphaelFreschi/mobile-accenture-test
    ```
-2. Instale as dependencias via CocoaPods
+2. Instale as dependência via CocoaPods
    ```sh
    pod install
    ```
