@@ -12,6 +12,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    let user = User()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -23,8 +25,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if !isValidEmail(self.email.text!) || email.text == "" {
             createAlert(title: "Atenção", msg: "Email inválido")
-        } else if !isValidPassword(self.password.text!) || password.text = "" {
-            createAlert(title: "Atenção", msg: "A senha deverá conter no mínimo 6 caracteres, um numúero e uma letra maiúscula")
+        } else if !isValidPassword(self.password.text!) || password.text == "" {
+            createAlert(title: "Atenção", msg: "A senha deve conter no mínimo 6 caracteres, um numúero e uma letra maiúscula")
+        }else {
+            self.user.email = email.text!
+            self.user.password = password.text!
+            
+            self.performSegue(withIdentifier: "loginToList", sender: nil)
+            
         }
     
     }
@@ -37,21 +45,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func isValidPassword(_ password: String) -> Bool {
-        let passwordRegEx = "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{6,}$"
+        let passwordRegEx = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$"
         
-        let password = NSPredicate(format: "SELF MATCHES %@ ", passwordRegEx)
-        return password.evaluate(with: password)
+        let passwordPred = NSPredicate(format: "SELF MATCHES %@ ", passwordRegEx)
+        print("\(passwordPred)")
+        return passwordPred.evaluate(with: password)
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
+    
 
 }
 

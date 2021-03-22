@@ -36,7 +36,12 @@ Instale o gerenciador de pacotes CocoaPods antes de clonar e rodar o projeto
    ```sh
    pod install
    ```
-3. Rode a aplicação no dispositivo iPhone 11 :)
+3. Abra o projeto com 
+   ```sh
+   open Marvel APP.xcworkspace
+   ```
+   
+4. Rode a aplicação no dispositivo iPhone 11 :)
    
 
 
