@@ -61,7 +61,12 @@
                     <constraint firstItem="dEu-7T-T75" firstAttribute="top" secondItem="Nk9-FL-3K9" secondAttribute="bottom" constant="29" id="bqL-ns-kOM"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="-11.594202898550726" y="21.763392857142858"/>
+            <connections>
+                <outlet property="imageComic" destination="aGT-tB-PRf" id="ECm-Uf-8sO"/>
+                <outlet property="pages" destination="dEu-7T-T75" id="nV1-wS-Oms"/>
+                <outlet property="title" destination="Nk9-FL-3K9" id="wkE-o1-nGn"/>
+            </connections>
+            <point key="canvasLocation" x="-51" y="47"/>
         </tableViewCell>
     </objects>
 </document>

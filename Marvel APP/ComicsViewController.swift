@@ -6,35 +6,45 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ComicsViewController: UIViewController {
     
-    
-    var items = 10
-    
+    var offset = 0
+        
     @IBOutlet weak var comicsTableView: UITableView!
+    
+    var comics = [comicsInfos]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.comicsTableView.reloadData()
+            }
+        }
+    }
+    
+    var comicsRequest:ComicsRequest?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         comicsTableView.register(UINib(nibName: "ComicsCell", bundle: nil), forCellReuseIdentifier: "ComicsCell")
+        
         comicsTableView.dataSource = self
         comicsTableView.delegate = self
         
-        
-        // Do any additional setup after loading the view.
+        self.comicsRequest = ComicsRequest(comicID: 0, offset: self.offset)
+        comicsRequest?.getComics { [weak self] result in
+            switch result{
+             case .failure(let error):
+                print(error)
+             case .success(let comics):
+                self?.comics = comics
+            }
+        }
+     
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -43,8 +53,18 @@ extension ComicsViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         if position > (comicsTableView.contentSize.height - 100)-scrollView.frame.size.height {
-            print("+10")
-            self.items += 10
+            
+            self.offset += 10
+            
+            comicsRequest?.getComics { [weak self] result in
+                switch result{
+                 case .failure(let error):
+                    print(error)
+                 case .success(let comics):
+                    self?.comics = comics
+                }
+            }
+            
             comicsTableView.reloadData()
         }
     }
@@ -54,12 +74,23 @@ extension ComicsViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items
+        return self.comics.count == 0 ? 1 : self.comics.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ComicsCell", for: indexPath) as! ComicsTableViewCell
         
+        if self.comics.count != 0 {
+            let comicsCell = self.comics[indexPath.row]
+            
+            print("ITEMS \(comicsCell) ")
+            
+            cell.updateCell(image: comicsCell.thumbnail.path
+                            , title: comicsCell.title, pages: comicsCell.pagesCount)
+        }
+        
+
         return cell
     }
     
@@ -69,3 +100,4 @@ extension ComicsViewController: UITableViewDataSource {
     
     
 }
+
