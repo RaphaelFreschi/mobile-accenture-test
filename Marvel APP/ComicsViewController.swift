@@ -8,7 +8,10 @@
 import UIKit
 
 class ComicsViewController: UIViewController {
-
+    
+    
+    var items = 10
+    
     @IBOutlet weak var comicsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -37,19 +40,31 @@ class ComicsViewController: UIViewController {
 
 extension ComicsViewController: UITableViewDelegate {
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (comicsTableView.contentSize.height - 100)-scrollView.frame.size.height {
+            print("+10")
+            self.items += 10
+            comicsTableView.reloadData()
+        }
+    }
 }
 
 extension ComicsViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.items
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ComicsCell", for: indexPath) as! ComicsTableViewCell
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "listToDetail", sender: nil)
     }
     
     

@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Marvel_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Marvel_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,6 +127,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiM-4V-zLK"/>
                                                     <segue destination="Jz0-IG-jzE" kind="show" id="mmn-BV-bhM"/>
                                                 </connections>
                                             </button>
@@ -174,6 +175,10 @@
                             <constraint firstItem="1k6-uV-wn0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iKN-ck-wQ9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="Nof-B9-kQh" id="M7p-9M-i55"/>
+                        <outlet property="password" destination="t6C-lc-1dO" id="Gaq-Pk-bQr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,7 +237,7 @@
                     <navigationItem key="navigationItem" id="Lcm-pR-Leu"/>
                     <connections>
                         <outlet property="comicsTableView" destination="MZj-X2-oZP" id="rfi-Wm-XQh"/>
-                        <segue destination="5Ds-fE-hmh" kind="show" id="ehK-y2-wKv"/>
+                        <segue destination="5Ds-fE-hmh" kind="show" identifier="listToDetail" id="ehK-y2-wKv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1UM-vM-0oR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -246,21 +251,64 @@
                     <view key="view" contentMode="scaleToFill" id="y29-2n-y5Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <userGuides>
+                            <userLayoutGuide location="15" affinity="minX"/>
+                            <userLayoutGuide location="399" affinity="minX"/>
+                        </userGuides>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I5l-iK-zoO">
-                                <rect key="frame" x="103" y="80" width="209" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I5l-iK-zoO">
+                                <rect key="frame" x="103" y="66" width="209" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="7sI-8Z-Fhu"/>
+                                    <constraint firstAttribute="height" constant="275" id="hVB-rk-IU1"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3r-yb-QTN">
-                                <rect key="frame" x="103" y="363" width="209" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3r-yb-QTN">
+                                <rect key="frame" x="15" y="371" width="384" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="bbX-QL-SMv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Gotham-Bold" family="Gotham" pointSize="17"/>
+                                <color key="textColor" red="0.77471858260000004" green="0.073359914119999994" blue="0.09708832949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDK-na-CzY">
+                                <rect key="frame" x="15" y="418" width="384" height="212"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="srg-bs-ARq"/>
+                                </constraints>
+                                <string key="text">For Doctor Bruce Banner life is anything but normal. But what happens when two women get between him and his alter ego, the Incorrigible Hulk? Hulk confused! \r\nIndy superstar Peter Bagge (THE MEGALOMANIACAL SPIDER-MAN) takes a satirical jab at the Hulk mythos with a tale of dames, debauchery and destruction.\r\n32 PGS./MARVEL PSR...$2.99</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Gotham-Black" family="Gotham" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slT-l2-LMU">
+                                <rect key="frame" x="15" y="638" width="384" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="oZ3-PI-mKc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZmK-rz-2ad"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I5l-iK-zoO" firstAttribute="top" secondItem="ZmK-rz-2ad" secondAttribute="top" constant="10" id="0Ng-o9-ExM"/>
+                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="slT-l2-LMU" secondAttribute="trailing" constant="15" id="8M4-Mc-EzX"/>
+                            <constraint firstItem="d3r-yb-QTN" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="AMe-vV-Ccu"/>
+                            <constraint firstItem="slT-l2-LMU" firstAttribute="top" secondItem="QDK-na-CzY" secondAttribute="bottom" constant="8" id="NVg-Cc-JFd"/>
+                            <constraint firstItem="d3r-yb-QTN" firstAttribute="top" secondItem="I5l-iK-zoO" secondAttribute="bottom" constant="30" id="Zay-QC-oNr"/>
+                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="I5l-iK-zoO" secondAttribute="trailing" constant="102" id="cLt-Uu-QLD"/>
+                            <constraint firstItem="slT-l2-LMU" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="gPy-20-Unf"/>
+                            <constraint firstItem="I5l-iK-zoO" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="103" id="gTg-U9-4Ic"/>
+                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="QDK-na-CzY" secondAttribute="trailing" constant="15" id="iIN-dL-fV3"/>
+                            <constraint firstItem="QDK-na-CzY" firstAttribute="leading" secondItem="ZmK-rz-2ad" secondAttribute="leading" constant="15" id="k7J-1d-4XQ"/>
+                            <constraint firstItem="ZmK-rz-2ad" firstAttribute="trailing" secondItem="d3r-yb-QTN" secondAttribute="trailing" constant="15" id="nsd-ZB-ZAq"/>
+                            <constraint firstItem="QDK-na-CzY" firstAttribute="top" secondItem="d3r-yb-QTN" secondAttribute="bottom" constant="10" id="wzV-3G-Au1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qsm-x1-Yeg"/>
                 </viewController>
